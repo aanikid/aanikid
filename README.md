@@ -5,7 +5,7 @@ namespace lotfiAanikid;
 
 class Apropos extends Moi
 {
-    public function activitéActulle(): array
+    public function activitéActuelle(): array
     {
         return [
             'Formation' => [
