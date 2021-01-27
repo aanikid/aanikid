@@ -1,16 +1,40 @@
-### Hi there 👋
+```php
+<?php
 
-<!--
-**aanikid/aanikid** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+namespace lotfiAanikid;
 
-Here are some ideas to get you started:
+class Apropos extends Moi
+{
+    public function activitéActulle(): array
+    {
+        return [
+            'Formation' => [
+                'centre' => ' WebForce-3 ',
+                'type' => ' Devellopeur Web ',
+                'ville' => ' Lille ',     
+            ]
+        ];
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    public function Compétences(): array
+    {
+        return [
+            Html::class,
+            Css::class,
+            Sass::class,
+            TailwindCss::class,
+            Bootstrap::class,
+            Javascript::class,
+            Jquery::class,
+            Php::class,
+            Sql::class,
+            Symfony::class,
+            Git::class,
+        ];
+    }
+
+    public function ambition(): string
+    {
+        return 'Actuellement en recherche de stage, en partie Backend.';
+    }
+}
