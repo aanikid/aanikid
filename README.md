@@ -8,10 +8,10 @@ class Apropos extends Moi
     public function activitéActuelle(): array
     {
         return [
-            'Formation' => [
-                'centre' => ' WebForce-3 ',
-                'type' => ' Devellopeur Web ',
-                'ville' => ' Lille ',     
+            'Stage' => [
+                'entreprise' => ' Dataview ',
+                'type' => ' Devellopeur Web backend et frontend',
+                'ville' => undefined,     
             ]
         ];
     }
@@ -22,9 +22,11 @@ class Apropos extends Moi
             Html::class,
             Css::class,
             Sass::class,
-            TailwindCss::class,
             Bootstrap::class,
             Javascript::class,
+            Typescript::class,
+            React.js::class,
+            node.js::class,
             Jquery::class,
             Php::class,
             Sql::class,
@@ -35,6 +37,6 @@ class Apropos extends Moi
 
     public function ambition(): string
     {
-        return 'Actuellement en recherche de stage, en partie Backend.';
+        return 'Actuellement en stage, ${Backend['node.js'] + Frontend['react.js']}.';
     }
 }
