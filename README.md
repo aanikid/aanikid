@@ -26,7 +26,7 @@ class Apropos extends Moi
             Javascript::class,
             Typescript::class,
             React.js::class,
-            node.js::class,
+            Node.js::class,
             Jquery::class,
             Php::class,
             Sql::class,
