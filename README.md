@@ -1,42 +1,41 @@
 ```php
 <?php
 
-namespace lotfiAanikid;
+namespace Aanikid\Lotfi;
 
-class Apropos extends Moi
+use Aanikid\Lotfi\Present;
+use Aanikid\Lotfi\Abilities;
+use Aanikid\Lotfi\Ambitions;
+use Aanikid\Lotfi\Hobbies;
+
+class About extends Me
 {
-    public function activitéActuelle(): array
+    public function __construct()
     {
-        return [
-            'Stage' => [
-                'entreprise' => ' Dataview ',
-                'type' => ' Devellopeur Web backend et frontend',
-                'ville' => undefined,     
-            ]
-        ];
+        $this->actualWork();
+        $this->getSkills();
+        $this->getGoals();
+        $this->getHobbies();
     }
 
-    public function Compétences(): array
+    private function actualWork()
     {
-        return [
-            Html::class,
-            Css::class,
-            Sass::class,
-            Bootstrap::class,
-            Javascript::class,
-            Typescript::class,
-            React.js::class,
-            Node.js::class,
-            Jquery::class,
-            Php::class,
-            Sql::class,
-            Symfony::class,
-            Git::class,
-        ];
+        Present::renderJob();
     }
 
-    public function ambition(): string
+    private function getSkills()
     {
-        return 'Actuellement en stage, ${Backend['node.js'] + Frontend['react.js']}.';
+        Abilities::renderSkills();
+    }
+    
+    private function getGoals()
+    {
+        Ambitions::renderGoals();
+    }
+    
+    private function getHobbies()
+    {
+        Hobbies::renderHobbies();
     }
 }
+```
