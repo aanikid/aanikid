@@ -12,6 +12,11 @@ class About extends Me
 {
     public function __construct()
     {
+       
+    }
+    
+    public function __invoke()
+    {
         $this->actualWork();
         $this->getSkills();
         $this->getGoals();
